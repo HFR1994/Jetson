@@ -4,8 +4,6 @@ from datetime import datetime, timedelta
 import numpy as np
 import platform
 import pickle
-i
-
 
 # Our list of known face encodings and a matching list of metadata about each face.
 known_face_encodings = []
@@ -35,6 +33,7 @@ def running_on_jetson_nano():
     # To make the same code work on a laptop or on a Jetson Nano, we'll detect when we are running on the Nano
     # so that we can access the camera correctly in that case.
     # On a normal Intel laptop, platform.machine() will be "x86_64" instead of "aarch64"
+    print(platform.machine())
     return platform.machine() == "aarch64"
 
 

@@ -22,8 +22,13 @@ class Jetson:
         classifier = self.train("img-data/faces", model_save_path="trained_knn_model.clf", n_neighbors=2)
         print("Training complete!")
 
-        # STEP 2: Using the trained classifier, make predictions for unknown images
-        video_capture = cv2.VideoCapture(0)
+        if self.running_on_jetson_nano():
+            # Accessing the camera with OpenCV on a Jetson Nano requires gstreamer with a custom gstreamer source string
+            video_capture = cv2.VideoCapture(self.get_jetson_gstreamer_source(), cv2.CAP_GSTREAMER)
+        else:
+            # Accessing the camera with OpenCV on a laptop just requires passing in the number of the webcam (usually 0)
+            # Note: You can pass in a filename instead if you want to process a video file instead of a live camera stream
+            video_capture = cv2.VideoCapture(0)
 
         while video_capture.isOpened():
             # Grab a single frame of video

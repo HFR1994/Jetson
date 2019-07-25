@@ -26,7 +26,7 @@ class Jetson:
 
         frames = []
         frame_count = 0
-        faces_in_batch={}
+        faces_in_batch = {}
 
         if self.running_on_jetson_nano():
             # Accessing the camera with OpenCV on a Jetson Nano requires gstreamer with a custom gstreamer source string
@@ -53,7 +53,7 @@ class Jetson:
             # Save each frame of the video to a list
             frame_count += 1
             frames.append(rgb_small_frame)
-            batch_size=32
+            batch_size = 32
 
             # Every 32 frames (the default batch size), batch process the list of frames to find faces
             if len(frames) == batch_size:
@@ -65,34 +65,36 @@ class Jetson:
 
                 # Now let's list all the faces we found in all 128 frames
                 for _, face_locations in enumerate(batch_of_face_locations):
-                    
+
                     number_of_faces_in_frame = len(face_locations)
 
                     if number_of_faces_in_frame != 0:
-                        faces_encodings = face_recognition.face_encodings(rgb_small_frame, known_face_locations=face_locations)
+                        faces_encodings = face_recognition.face_encodings(rgb_small_frame,
+                                                                          known_face_locations=face_locations)
                         predictions = self.predict(face_locations, faces_encodings, model_path="trained_knn_model.clf")
                         # Print results on the console
                         for name, (top, right, bottom, left) in predictions:
-
-                            top *= 4
-                            right *= 4
-                            bottom *= 4
-                            left *= 4
+                            print("Found face: ", name)
+                            # top *= 4
+                            # right *= 4
+                            # bottom *= 4
+                            # left *= 4
 
                             height, width, _ = frame.shape
 
-                            coor = self.getCoordinates(width, height, {'top':top, 'left':left, 'height':bottom-top, 'width':right-left})
+                            coor = self.getCoordinates(width, height, {"top": top, "left": left, "height": bottom - top,
+                                                                       "width": right - left})
 
                             if name not in faces_in_batch:
                                 faces_in_batch[name] = []
-                            
+
                             faces_in_batch[name].append({"frame": frame, "face_location": coor})
 
                 response = {}
 
-                for key, value in faces_in_batch.items(): 
-                    if(key != "unknown"):
-                        middle = int(len(value)/2)
+                for key, value in faces_in_batch.items():
+                    if key != "unknown":
+                        middle = int(len(value) / 2)
 
                         selected = value[middle]["frame"]
                         location = value[middle]["face_location"]
@@ -100,25 +102,26 @@ class Jetson:
                         # Copy image no reference
                         img = copy.deepcopy(selected)
 
-                        crop_img = img[location["top"]:location["top"]+location["height"], location["left"]:location["left"]+location["width"]]
+                        crop_img = img[location["top"]:location["top"] + location["height"],
+                                   location["left"]:location["left"] + location["width"]]
 
                         buffer = cv2.imencode('.jpg', crop_img)
                         jpg_as_text = base64.b64encode(buffer[1]).decode()
 
-                        response[key] = {"face_location": location, "image": "data:image/jpeg;base64,"+jpg_as_text}
+                        response[key] = {"face_location": location, "image": "data:image/jpeg;base64," + jpg_as_text}
 
                 frames = []
                 frame_count = 0
                 faces_in_batch = {}
 
-                if(len(response) > 0):
-                    requests.post("https://orquestrator-visual.mybluemix.net/facePaint", data=json.dumps(response))
-
+                headers = {'Content-type': 'application/json'}
+                while len(response) > 0:
+                    requests.post("http://hectors-mbp-2.mexico.ibm.com:3000/facePaint", data=json.dumps({"payload": response}), headers=headers)
 
             # Hit 'q' on the keyboard to quit!
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-    
+
         # Release handle to the webcam
         video_capture.release()
         cv2.destroyAllWindows()
@@ -129,7 +132,8 @@ class Jetson:
         # On a normal Intel laptop, platform.machine() will be "x86_64" instead of "aarch64"
         return platform.machine() == "aarch64"
 
-    def get_jetson_gstreamer_source(self, capture_width=1280, capture_height=720, display_width=1280, display_height=720,
+    def get_jetson_gstreamer_source(self, capture_width=1280, capture_height=720, display_width=1280,
+                                    display_height=720,
                                     framerate=60, flip_method=0):
         """
         Return an OpenCV-compatible video source description that uses gstreamer to capture video from the camera on a Jetson Nano
@@ -180,65 +184,60 @@ class Jetson:
             "t": 0 - initial["t"] if initial["t"] < 0 else 0,
         }
 
-        final={
+        final = {
             "width": 0,
             "height": 0,
             "left": 0,
             "top": 0
         }
 
-        if(delta["w"] == 0 and 0 == delta["l"]):
-            final["width"]=initial["w"]
-            final["left"]=initial["l"]
-        elif(delta["w"] > delta["l"]):
+        if delta["w"] == 0 and 0 == delta["l"]:
+            final["width"] = initial["w"]
+            final["left"] = initial["l"]
+        elif delta["w"] > delta["l"]:
             final["width"] = width
-            if(delta["l"] == 0):
-                final["left"]=initial["l"]+delta["w"]
+            if delta["l"] == 0:
+                final["left"] = initial["l"] + delta["w"]
             else:
-                final["left"]=initial["l"]+delta["w"]-delta["l"]     
+                final["left"] = initial["l"] + delta["w"] - delta["l"]
         else:
             final["left"] = 0
-            if(delta["w"] == 0):
-                final["width"]=initial["w"]-delta["l"]
+            if delta["w"] == 0:
+                final["width"] = initial["w"] - delta["l"]
             else:
-                final["width"]=initial["w"]-delta["l"]+delta["w"]
-            
-        
+                final["width"] = initial["w"] - delta["l"] + delta["w"]
 
-        if(delta["h"] == 0 and 0 == delta["t"]):
-            final["height"]=initial["h"]
-            final["top"]=initial["t"]
-        elif(delta["h"] > delta["t"]):
+        if delta["h"] == 0 and 0 == delta["t"]:
+            final["height"] = initial["h"]
+            final["top"] = initial["t"]
+        elif delta["h"] > delta["t"]:
             final["height"] = height
-            if(delta["t"] == 0):
-                final["top"]=initial["t"]+delta["h"]
+            if delta["t"] == 0:
+                final["top"] = initial["t"] + delta["h"]
             else:
-                final["top"]=initial["t"]+delta["h"]-delta["t"]
+                final["top"] = initial["t"] + delta["h"] - delta["t"]
         else:
             final["top"] = 0
-            if(delta["h"] == 0):
-                final["height"]=initial["h"]-delta["t"]
+            if delta["h"] == 0:
+                final["height"] = initial["h"] - delta["t"]
             else:
-                final["height"]=initial["h"]-delta["t"]+delta["h"]
-            
-        if(final["width"] + final["left"] > width):
-            delta = (final["width"] + final["left"]) - width
-            final["left"] = 0 if final["left"]- delta < 0 else final["left"]-delta
-        
+                final["height"] = initial["h"] - delta["t"] + delta["h"]
 
-        if(final["height"] + final["top"] > height):
+        if final["width"] + final["left"] > width:
+            delta = (final["width"] + final["left"]) - width
+            final["left"] = 0 if final["left"] - delta < 0 else final["left"] - delta
+
+        if final["height"] + final["top"] > height:
             delta = (final["height"] + final["top"]) - height
-            final["top"] = 0 if final["top"]- delta < 0 else final["top"]-delta
-        
+            final["top"] = 0 if final["top"] - delta < 0 else final["top"] - delta
 
         return final
-        
-    def gdc(self, p,q):
-        if(q == 0):
+
+    def gdc(self, p, q):
+        if q == 0:
             return p
         else:
-            return self.gdc(q, p%q)
-
+            return self.gdc(q, p % q)
 
     def train(self, train_dir, model_save_path=None, n_neighbors=None, knn_algo='ball_tree', verbose=False):
         X = []

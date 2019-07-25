@@ -116,7 +116,7 @@ class Jetson:
 
                 headers = {'Content-type': 'application/json'}
                 while len(response) > 0:
-                    requests.post("http://hectors-mbp-2.mexico.ibm.com:3000/facePaint", data=json.dumps({"payload": response}), headers=headers)
+                    requests.post("https://orquestrator-visual.mybluemix.net/facePaint", data=json.dumps({"payload": response}), headers=headers)
 
             # Hit 'q' on the keyboard to quit!
             if cv2.waitKey(1) & 0xFF == ord('q'):

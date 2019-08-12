@@ -12,6 +12,7 @@ import json
 import base64
 import copy
 
+
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 

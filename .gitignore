@@ -1,3 +1,7 @@
 venv/*
 img-data/*
 trained_knn_model.clf
+Lib/*
+Include/*
+Scripts/*
+CSI-Camera/*

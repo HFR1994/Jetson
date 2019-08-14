@@ -168,7 +168,7 @@ class Jetson:
                     face_image = cv2.resize(face_image, (150, 150))
                     self.register_new_face(face_encoding, face_image)
 
-                current.append({"face_encoding": face_encoding, "face_location": face_location})
+                current.append({"face_encoding": face_encoding, "face_location": face_location, "timestamp": str(datetime.datetime.utcnow())})
 
             send = False
             if len(current) != len(self.cache):
@@ -229,7 +229,7 @@ class Jetson:
             buffer = cv2.imencode('.jpg', crop_img)
             jpg_as_text = base64.b64encode(buffer[1]).decode()
 
-            return {"identified": True, "name": data["person"], "timestamp": str(datetime.datetime.utcnow()), "image": "data:image/jpeg;base64," + jpg_as_text}
+            return {"identified": True, "name": data["person"], "timestamp": dato.get("timestamp"), "image": "data:image/jpeg;base64," + jpg_as_text}
 
     def getCoordinates(self, width, height, face):
 

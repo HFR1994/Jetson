@@ -143,6 +143,7 @@ class Jetson:
 
             i = 0
             current = []
+            print("Detecto {} caras".format(len(face_locations)))
             for face_location, face_encoding in zip(face_locations, face_encodings):
 
                 if len(self.known_face_encodings) != 0:
@@ -156,12 +157,14 @@ class Jetson:
                         # font = cv2.FONT_HERSHEY_DUPLEX
                         # cv2.putText(frame, str(val), (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
                     else:
+                        print("Registrando una nueva cara")
                         # Add the new face to our known face data
                         top, right, bottom, left = face_location
                         face_image = small_frame[top:bottom, left:right]
                         face_image = cv2.resize(face_image, (150, 150))
                         self.register_new_face(face_encoding, face_image)
                 else:
+                    print("Registrando una nueva cara")
                     # Add the new face to our known face data
                     top, right, bottom, left = face_location
                     face_image = small_frame[top:bottom, left:right]
@@ -172,16 +175,19 @@ class Jetson:
 
             send = False
             if len(current) != len(self.cache):
+                print("Lo envio")
                 send = True
             else:
                 for data in current:
                     face_distances = face_recognition.face_distance(self.cache, data.get("face_encoding"))
                     best_match_index = np.argmin(face_distances)
                     if face_distances[best_match_index] > 0.65:
+                        print("Lo envio")
                         send = True
                         break
 
             if send:
+                print("Lo enviando")
                 self.cache = list(map(self.data_parse, current))
                 response = list(map(self.generate_request, current))
 

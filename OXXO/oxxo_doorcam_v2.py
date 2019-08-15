@@ -21,6 +21,7 @@ class Jetson:
         self.known_face_metadata = []
         self.cache = []
         self.frame = None
+        self.best_match = None
 
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
@@ -36,10 +37,15 @@ class Jetson:
         self.known_face_encodings.append(face_encoding)
         # Add a matching dictionary entry to our metadata list.
         # We can use this to keep track of how many times a person has visited, when we last saw them, etc.
-        self.known_face_metadata.append({
+
+        value = {
             "face_image": face_image,
             "person": "Persona {}".format(str(len(self.known_face_metadata)+1))
-        })
+        }
+
+        self.known_face_metadata.append(value)
+
+        return value
 
     def load_face_metadata(self, face_enconding):
         # Calculate the face distance between the unknown face and every face on in our known face list
@@ -143,14 +149,14 @@ class Jetson:
 
             i = 0
             current = []
-            print("Detecto {} caras".format(len(face_locations)))
+            print("Detecto {} caras en {}".format(len(face_locations), str(datetime.datetime.utcnow())))
             for face_location, face_encoding in zip(face_locations, face_encodings):
 
                 if len(self.known_face_encodings) != 0:
 
-                    data = self.load_face_metadata(face_encoding)
+                    self.best_match = self.load_face_metadata(face_encoding)
 
-                    if data is not None:
+                    if self.best_match is not None:
                         print("Persona {} su hash es {}".format(i, data["person"]))
                         # Draw a label with a name below the face
                         # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
@@ -162,16 +168,16 @@ class Jetson:
                         top, right, bottom, left = face_location
                         face_image = small_frame[top:bottom, left:right]
                         face_image = cv2.resize(face_image, (150, 150))
-                        self.register_new_face(face_encoding, face_image)
+                        self.best_match = self.register_new_face(face_encoding, face_image)
                 else:
                     print("Registrando una nueva cara")
                     # Add the new face to our known face data
                     top, right, bottom, left = face_location
                     face_image = small_frame[top:bottom, left:right]
                     face_image = cv2.resize(face_image, (150, 150))
-                    self.register_new_face(face_encoding, face_image)
+                    self.best_match = self.register_new_face(face_encoding, face_image)
 
-                current.append({"face_encoding": face_encoding, "face_location": face_location, "timestamp": str(datetime.datetime.utcnow())})
+                current.append({"face_encoding": face_encoding, "best_match": copy.deepcopy(self.best_match), "face_location": face_location, "timestamp": str(datetime.datetime.utcnow())})
 
             send = False
             if len(current) != len(self.cache):
@@ -211,31 +217,27 @@ class Jetson:
         return datos.get("face_encoding")
 
     def generate_request(self, dato):
-        data = self.load_face_metadata(dato.get("face_encoding"))
 
-        if data is None:
-            raise ValueError('Value for {} is None'.format(str(data["face_encoding"])))
-        else:
-            height, width, _ = self.frame.shape
+        height, width, _ = self.frame.shape
 
-            top, right, bottom, left = dato.get("face_location")
+        top, right, bottom, left = dato.get("face_location")
 
-            top *= 4
-            right *= 4
-            bottom *= 4
-            left *= 4
+        top *= 4
+        right *= 4
+        bottom *= 4
+        left *= 4
 
-            location = self.getCoordinates(width, height, {"top": top, "left": left, "height": bottom - top, "width": right - left})
+        location = self.getCoordinates(width, height, {"top": top, "left": left, "height": bottom - top, "width": right - left})
 
-            # Copy image no reference
-            img = copy.deepcopy(self.frame)
+        # Copy image no reference
+        img = copy.deepcopy(self.frame)
 
-            crop_img = img[location["top"]:location["top"] + location["height"], location["left"]:location["left"] + location["width"]]
+        crop_img = img[location["top"]:location["top"] + location["height"], location["left"]:location["left"] + location["width"]]
 
-            buffer = cv2.imencode('.jpg', crop_img)
-            jpg_as_text = base64.b64encode(buffer[1]).decode()
+        buffer = cv2.imencode('.jpg', crop_img)
+        jpg_as_text = base64.b64encode(buffer[1]).decode()
 
-            return {"identified": True, "name": data["person"], "timestamp": dato.get("timestamp"), "image": "data:image/jpeg;base64," + jpg_as_text}
+        return {"identified": True, "name": dato.get("best_match")["person"], "timestamp": dato.get("timestamp"), "image": "data:image/jpeg;base64," + jpg_as_text}
 
     def getCoordinates(self, width, height, face):
 

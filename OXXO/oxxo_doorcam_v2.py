@@ -62,7 +62,7 @@ class Jetson:
         # Here, we are loosening the threshold a little bit to 0.65 because it is unlikely that two very similar
         # people will come up to the door at the same time.
 
-        print("La comparacion es: {}".format(best_match_index))
+        print(best_match_index)
         if face_distances[best_match_index] <= 0.65:
             return self.known_face_metadata[best_match_index]
 

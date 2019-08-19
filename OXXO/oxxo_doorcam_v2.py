@@ -38,9 +38,10 @@ class Jetson:
         # Add a matching dictionary entry to our metadata list.
         # We can use this to keep track of how many times a person has visited, when we last saw them, etc.
 
+        print(len(self.known_face_encodings))
         value = {
             "face_image": face_image,
-            "person": "Persona {}".format(str(len(self.known_face_metadata)+1))
+            "person": "Persona {}".format(str(len(self.known_face_encodings)+1))
         }
 
         self.known_face_metadata.append(value)

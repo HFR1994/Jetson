@@ -157,7 +157,7 @@ class Jetson:
                     self.best_match = self.load_face_metadata(face_encoding)
 
                     if self.best_match is not None:
-                        print("Persona {} su hash es {}".format(i, data["person"]))
+                        print("Persona {} su hash es {}".format(i, self.best_match["person"]))
                         # Draw a label with a name below the face
                         # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
                         # font = cv2.FONT_HERSHEY_DUPLEX

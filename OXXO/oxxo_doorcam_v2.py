@@ -38,10 +38,9 @@ class Jetson:
         # Add a matching dictionary entry to our metadata list.
         # We can use this to keep track of how many times a person has visited, when we last saw them, etc.
 
-        print(len(self.known_face_encodings))
         value = {
             "face_image": face_image,
-            "person": "Persona {}".format(str(len(self.known_face_encodings)+1))
+            "person": "Persona {}".format(str(len(self.known_face_encodings)))
         }
 
         self.known_face_metadata.append(value)
@@ -63,7 +62,8 @@ class Jetson:
         # Here, we are loosening the threshold a little bit to 0.65 because it is unlikely that two very similar
         # people will come up to the door at the same time.
 
-        if best_match_index <= 0.65:
+        print(face_distances[best_match_index])
+        if face_distances[best_match_index] <= 0.65:
             return self.known_face_metadata[best_match_index]
 
         return None

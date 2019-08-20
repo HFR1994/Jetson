@@ -40,7 +40,7 @@ class Jetson:
 
         value = {
             "face_image": face_image,
-            "person": "Persona {}".format(str(len(self.known_face_encodings)))
+            "person": "Persona {}".format(str(len(self.known_face_metadata)))
         }
 
         self.known_face_metadata.append(value)
@@ -63,7 +63,7 @@ class Jetson:
         # people will come up to the door at the same time.
 
         print(face_distances[best_match_index])
-        if face_distances[best_match_index] <= 0.65:
+        if face_distances[best_match_index] < 0.50:
             return self.known_face_metadata[best_match_index]
 
         return None
@@ -148,7 +148,6 @@ class Jetson:
             face_locations = face_recognition.face_locations(rgb_small_frame)
             face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
 
-            i = 0
             current = []
             print("Detecto {} caras en {}".format(len(face_locations), str(datetime.datetime.utcnow())))
             for face_location, face_encoding in zip(face_locations, face_encodings):
@@ -158,7 +157,7 @@ class Jetson:
                     self.best_match = self.load_face_metadata(face_encoding)
 
                     if self.best_match is not None:
-                        print("Persona {} su hash es {}".format(i, self.best_match["person"]))
+                        print("Hash es {}".format(self.best_match["person"]))
                         # Draw a label with a name below the face
                         # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
                         # font = cv2.FONT_HERSHEY_DUPLEX

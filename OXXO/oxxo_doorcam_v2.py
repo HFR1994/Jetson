@@ -63,7 +63,7 @@ class Jetson:
         # people will come up to the door at the same time.
 
         print(face_distances[best_match_index])
-        if face_distances[best_match_index] < 0.50:
+        if face_distances[best_match_index] < 0.57:
             return self.known_face_metadata[best_match_index]
 
         return None

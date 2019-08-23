@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serving_static/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,14 +28,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="99">
+              <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3187">
+              <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serving_static/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -102,6 +123,8 @@
         <option value="$PROJECT_DIR$/doorcam_v4.py" />
         <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py" />
         <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py" />
+        <option value="$PROJECT_DIR$/serving_static/templates/index.html" />
+        <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" />
       </list>
     </option>
   </component>
@@ -130,6 +153,17 @@
               <item name="Jetson" type="462c0819:PsiDirectoryNode" />
               <item name="OXXO" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
+              <item name="serving_static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
+              <item name="serving_static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -145,7 +179,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/OXXO" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -157,16 +191,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data\test" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\OXXO" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\Faces\Jazmin" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\Faces\Hector" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data\test" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -181,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Oxxo_Doorcam_V2">
+  <component name="RunManager" selected="Python.Oxxo_Doorcam_V3">
     <configuration name="Oxxo_Doorcam_V2" type="PythonConfigurationType" factoryName="Python">
       <module name="Jetson" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -196,6 +230,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Oxxo_Doorcam_V3" type="PythonConfigurationType" factoryName="Python">
+      <module name="Jetson" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\frhec\PycharmProjects\Jetson\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OXXO" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -296,6 +349,7 @@
       <item itemvalue="Python.doorcam_v3" />
       <item itemvalue="Python.doorcam_v4" />
       <item itemvalue="Python.Oxxo_Doorcam_V2" />
+      <item itemvalue="Python.Oxxo_Doorcam_V3" />
       <item itemvalue="Python.doorcam_v2" />
     </list>
     <recent_temporary>
@@ -329,12 +383,12 @@
       <workItem from="1566235561627" duration="2057000" />
       <workItem from="1566319948609" duration="1484000" />
       <workItem from="1566510304723" duration="794000" />
-      <workItem from="1566581863573" duration="240000" />
+      <workItem from="1566581863573" duration="3477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79003000" />
+    <option name="totallyTimeSpent" value="82240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,7 +401,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2435275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -364,7 +417,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32978722" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.46276596" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.46276596" />
       <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -543,8 +596,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving_static/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3187">
+          <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

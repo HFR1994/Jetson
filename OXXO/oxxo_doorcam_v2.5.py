@@ -9,6 +9,7 @@ import requests
 import copy
 import json
 import base64
+import paho.mqtt.client as mqtt
 
 # noinspection SqlResolve
 class Jetson:
@@ -22,6 +23,10 @@ class Jetson:
         self.cache = []
         self.frame = None
         self.best_match = None
+        self.client = mqtt.Client(client_id="jetson_oxxo_1", clean_session=True, userdata=None, protocol="MQTTv311", transport="tcp")
+        # self.client.username_pw_set(, password=None)
+        self.client.connect("iot.eclipse.org", 1883, 60)
+        self.client.loop_forever()
 
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
@@ -202,6 +207,19 @@ class Jetson:
 
     def data_parse(self, datos):
         return datos.get("face_encoding")
+
+    # The callback for when the client receives a CONNACK response from the server.
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code " + str(rc))
+
+        # Subscribing in on_connect() means that if we lose the connection and
+        # reconnect then subscriptions will be renewed.
+        client.subscribe("$SYS/#")
+
+    # The callback for when a PUBLISH message is received from the server.
+    def on_message(client, userdata, msg):
+        print(msg.topic + " " + str(msg.payload))
+
 
     def generate_request(self, dato):
 

@@ -9,11 +9,13 @@ import requests
 import copy
 import json
 import base64
+import sys
+
 
 # noinspection SqlResolve
 class Jetson:
 
-    def __init__(self):
+    def __init__(self, argv):
         self.conn = None
         self.cursor = None
         # Our list of known face encodings and a matching list of metadata about each face.
@@ -22,6 +24,10 @@ class Jetson:
         self.cache = []
         self.frame = None
         self.best_match = None
+        if len(argv) == 1:
+            self.accuracy = 0.60
+        else:
+            self.accuracy = float(argv[1])
 
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
@@ -63,7 +69,7 @@ class Jetson:
         # people will come up to the door at the same time.
 
         print(face_distances[best_match_index])
-        if face_distances[best_match_index] < 0.57:
+        if face_distances[best_match_index] < self.accuracy:
             return self.known_face_metadata[best_match_index]
 
         return None
@@ -134,7 +140,6 @@ class Jetson:
             # Note: You can pass in a filename instead if you want to process a video file instead of a live camera stream
             video_capture = cv2.VideoCapture(0)
 
-
         while video_capture.isOpened():
             # Grab a single frame of video
             ret, self.frame = video_capture.read()
@@ -177,7 +182,8 @@ class Jetson:
                     face_image = cv2.resize(face_image, (150, 150))
                     self.best_match = self.register_new_face(face_encoding, face_image)
 
-                current.append({"face_encoding": face_encoding, "best_match": copy.deepcopy(self.best_match), "face_location": face_location, "timestamp": str(datetime.datetime.utcnow())})
+                current.append({"face_encoding": face_encoding, "best_match": copy.deepcopy(self.best_match),
+                                "face_location": face_location, "timestamp": str(datetime.datetime.utcnow())})
 
             send = False
             if len(current) != len(self.cache):
@@ -199,8 +205,8 @@ class Jetson:
 
                 headers = {'Content-type': 'application/json'}
                 if len(response) > 0:
-                    requests.post("https://orquestrator-visual.mybluemix.net/sendAll", data=json.dumps({"payload": response}), headers=headers)
-
+                    requests.post("https://orquestrator-visual.mybluemix.net/sendAll",
+                                  data=json.dumps({"payload": response}), headers=headers)
 
             # cv2.imshow('Video', frame)
 
@@ -227,17 +233,20 @@ class Jetson:
         bottom *= 4
         left *= 4
 
-        location = self.getCoordinates(width, height, {"top": top, "left": left, "height": bottom - top, "width": right - left})
+        location = self.getCoordinates(width, height,
+                                       {"top": top, "left": left, "height": bottom - top, "width": right - left})
 
         # Copy image no reference
         img = copy.deepcopy(self.frame)
 
-        crop_img = img[location["top"]:location["top"] + location["height"], location["left"]:location["left"] + location["width"]]
+        crop_img = img[location["top"]:location["top"] + location["height"],
+                   location["left"]:location["left"] + location["width"]]
 
         buffer = cv2.imencode('.jpg', crop_img)
         jpg_as_text = base64.b64encode(buffer[1]).decode()
 
-        return {"identified": True, "name": dato.get("best_match")["person"], "timestamp": dato.get("timestamp"), "image": "data:image/jpeg;base64," + jpg_as_text}
+        return {"identified": True, "name": dato.get("best_match")["person"], "timestamp": dato.get("timestamp"),
+                "image": "data:image/jpeg;base64," + jpg_as_text}
 
     def getCoordinates(self, width, height, face):
 
@@ -304,5 +313,6 @@ class Jetson:
 
         return final
 
-d = Jetson()
+
+d = Jetson(sys.argv)
 d.principal()

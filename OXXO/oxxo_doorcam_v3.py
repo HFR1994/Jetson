@@ -366,6 +366,9 @@ def restart():
     time.sleep(2)
     return hello()
 
+@app.route("/",)
+def start():
+    return hello()
 
 @app.route("/sound", methods=["post"])
 def sound():

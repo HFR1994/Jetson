@@ -366,9 +366,11 @@ def restart():
     time.sleep(2)
     return hello()
 
-@app.route("/",)
+
+@app.route("/")
 def start():
     return hello()
+
 
 @app.route("/sound", methods=["post"])
 def sound():
@@ -377,7 +379,7 @@ def sound():
 
 
 @app.route("/accuracy", methods=["post"])
-def sound():
+def accuracy():
     d.setAccuracy(request.form['accuracy'])
     return restart()
 

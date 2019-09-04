@@ -367,7 +367,7 @@ def restart():
     return hello()
 
 
-@app.route("/", )
+@app.route("/")
 def start():
     return hello()
 

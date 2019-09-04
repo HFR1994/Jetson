@@ -13,7 +13,9 @@ import sys
 from flask import Flask
 from flask import render_template
 import threading
-
+import time
+from playsound import playsound
+import os
 
 # noinspection SqlResolve
 class Jetson:
@@ -38,6 +40,12 @@ class Jetson:
 
     def setValue(self, condition):
         self.loop = condition
+
+    def getAccuracy(self):
+        return self.loop
+
+    def setAccuracy(self, accuracy):
+        self.accuracy = accuracy
 
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
@@ -330,6 +338,7 @@ d = Jetson(sys.argv)
 app = Flask(__name__, template_folder="../templates")
 threader = threading.Event()
 
+
 @app.route("/start")
 def hello():
     if not d.getValue():
@@ -346,6 +355,18 @@ def hello():
 def stop():
     d.setValue(False)
     message = "Server Stop"
+    return render_template('index.html', message=message)
+
+
+@app.route("/restart")
+def restart():
+    stop()
+    time.sleep(2)
+    return hello()
+
+@app.route("/sound")
+def sound():
+    playsound(os.getcwd()+'/assets/beep.wav')
     return render_template('index.html', message=message)
 
 

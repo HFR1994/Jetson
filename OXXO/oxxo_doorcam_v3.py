@@ -384,5 +384,10 @@ def accuracy():
     return restart()
 
 
+@app.route("/oxxo")
+def oxxo():
+    return render_template('dist/index.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)

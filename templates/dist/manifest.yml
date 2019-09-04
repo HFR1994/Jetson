@@ -1,0 +1,6 @@
+---
+applications:
+  - name: oxxo-face-recognition
+    memory: 512M
+    instances: 1
+    buildpack: staticfile_buildpack

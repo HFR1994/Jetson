@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
-    </list>
+    <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="376" column="24" selection-start-line="376" selection-start-column="24" selection-end-line="376" selection-end-column="24" />
+            <state relative-caret-position="-76">
+              <caret line="369" column="14" selection-start-line="369" selection-start-column="14" selection-end-line="369" selection-end-column="14" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -53,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -106,6 +104,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -385,12 +384,12 @@
       <workItem from="1566319948609" duration="1484000" />
       <workItem from="1566510304723" duration="794000" />
       <workItem from="1566581863573" duration="3973000" />
-      <workItem from="1567634083833" duration="1785000" />
+      <workItem from="1567634083833" duration="3252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84521000" />
+    <option name="totallyTimeSpent" value="85988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,9 +402,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24110033" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24110033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -419,7 +417,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.46276596" />
       <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -579,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -616,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="376" column="24" selection-start-line="376" selection-start-column="24" selection-end-line="376" selection-end-column="24" />
+        <state relative-caret-position="-76">
+          <caret line="369" column="14" selection-start-line="369" selection-start-column="14" selection-end-line="369" selection-end-column="14" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

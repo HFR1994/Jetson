@@ -12,10 +12,12 @@ import base64
 import sys
 from flask import Flask
 from flask import render_template
+from flask import request
 import threading
 import time
 from playsound import playsound
 import os
+
 
 # noinspection SqlResolve
 class Jetson:
@@ -345,29 +347,36 @@ def hello():
         d.setValue(True)
         threading.Timer(3, d.principal, []).start()
         message = "Server Started"
-        return render_template('index.html', message=message)
+        return render_template('index.html')
     else:
         message = "Server is running"
-        return render_template('index.html', message=message)
+        return render_template('index.html')
 
 
-@app.route("/stop")
+@app.route("/stop", methods=["post"])
 def stop():
     d.setValue(False)
     message = "Server Stop"
-    return render_template('index.html', message=message)
+    return render_template('index.html')
 
 
-@app.route("/restart")
+@app.route("/restart", methods=["post"])
 def restart():
     stop()
     time.sleep(2)
     return hello()
 
-@app.route("/sound")
+
+@app.route("/sound", methods=["post"])
 def sound():
-    playsound(os.getcwd()+'/assets/beep.wav')
-    return render_template('index.html', message=message)
+    playsound(os.getcwd() + '/assets/beep.wav')
+    return render_template('index.html')
+
+
+@app.route("/accuracy", methods=["post"])
+def sound():
+    d.setAccuracy(request.form['accuracy'])
+    return restart()
 
 
 if __name__ == "__main__":

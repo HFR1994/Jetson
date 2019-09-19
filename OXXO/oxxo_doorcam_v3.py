@@ -226,7 +226,7 @@ class Jetson:
 
                 headers = {'Content-type': 'application/json'}
                 if len(response) > 0:
-                    requests.post("https://orquestrator-visual.mybluemix.net/sendAll",
+                    requests.post("http://localhost:3000/sendAll",
                                   data=json.dumps({"payload": response}), headers=headers)
 
             # cv2.imshow('Video', frame)

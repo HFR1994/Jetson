@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="" />
+    <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/Staticfile" beforeDir="false" afterPath="$PROJECT_DIR$/static/Staticfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/eh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/eh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fondo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fondo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fondo1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fondo1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/jo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/jo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/logooxxo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/logooxxo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/assets/logowa.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/logowa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/fon.c449f91b1f68c991463d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/fon.c449f91b1f68c991463d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oxxo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/inline.318b50c57b4eba3d437b.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/inline.318b50c57b4eba3d437b.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/main.eff45961ff30b08fdd9d.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.eff45961ff30b08fdd9d.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/manifest.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/polyfills.16286cde992a53adbc8d.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills.16286cde992a53adbc8d.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dist/styles.cecaf8f00a5fae635a09.bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.cecaf8f00a5fae635a09.bundle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main-es2015.e85febc3c7c48ccdb78f.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-es2015.e85febc3c7c48ccdb78f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main-es5.e85febc3c7c48ccdb78f.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-es5.e85febc3c7c48ccdb78f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/polyfills-es2015.fd917e7c3ed57f282ee5.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills-es2015.fd917e7c3ed57f282ee5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/polyfills-es5.f9fad3ad3c84e6dbdd72.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills-es5.f9fad3ad3c84e6dbdd72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/runtime-es2015.24b02acc1f369d9b9f37.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/runtime-es2015.24b02acc1f369d9b9f37.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/runtime-es5.24b02acc1f369d9b9f37.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/runtime-es5.24b02acc1f369d9b9f37.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/styles.8848d66e8094fb5e4f4b.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.8848d66e8094fb5e4f4b.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,67 +53,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3799">
-              <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="369" column="14" selection-start-line="369" selection-start-column="14" selection-end-line="369" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doorcam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -97,6 +67,8 @@
       <find>--yes</find>
       <find>print</find>
       <find>i =</find>
+      <find>href</find>
+      <find>src=&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>--yes</replace>
@@ -107,65 +79,13 @@
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/doorcam.py" />
-        <option value="$PROJECT_DIR$/kMeans.py" />
-        <option value="$PROJECT_DIR$/doorcam_v3.py" />
-        <option value="$PROJECT_DIR$/video_recorder.py" />
-        <option value="$PROJECT_DIR$/runMe.sh" />
-        <option value="$PROJECT_DIR$/doorcam_v2.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/doorcam_v4.py" />
-        <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py" />
-        <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py" />
-        <option value="$PROJECT_DIR$/serving_static/templates/index.html" />
-        <option value="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="30" />
-    <option name="y" value="60" />
-    <option name="width" value="3780" />
-    <option name="height" value="1920" />
+    <option name="y" value="21" />
+    <option name="width" value="1440" />
+    <option name="height" value="879" />
   </component>
+  <component name="ProjectId" id="1R4TRLLT9d2n5reVjRPz7RIuXOj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
-              <item name="OXXO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jetson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jetson" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -175,7 +95,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -186,15 +106,24 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\templates" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\assets" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\OXXO" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\Faces\Jazmin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\templates" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\static" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data\test" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
@@ -239,9 +168,6 @@
       <module name="Jetson" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\Users\frhec\PycharmProjects\Jetson\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OXXO" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -384,12 +310,14 @@
       <workItem from="1566319948609" duration="1484000" />
       <workItem from="1566510304723" duration="794000" />
       <workItem from="1566581863573" duration="3973000" />
-      <workItem from="1567634083833" duration="3252000" />
+      <workItem from="1567634083833" duration="5433000" />
+      <workItem from="1568234696077" duration="707000" />
+      <workItem from="1568391130361" duration="1084000" />
+      <workItem from="1568392655908" duration="161000" />
+      <workItem from="1568925362393" duration="3208000" />
+      <workItem from="1568929578749" duration="1472000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,37 +328,21 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24110033" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39893618" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32978722" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.46276596" />
-      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32978722" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32928804" />
-      <window_info anchor="right" id="Remote Host" order="5" sideWeight="0.4973545" weight="0.32928804" />
-      <window_info anchor="right" x="0" y="0" width="273" height="492" id="Documentation" order="6" sideWeight="0.5026455" side_tool="true" weight="0.25080907" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -445,182 +357,5 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Jetson$doorcam_v4.coverage" NAME="doorcam_v4 Coverage Results" MODIFIED="1564084875186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dec58131-8220-46a0-8228-722599b029f9/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/sqlite3/dbapi2.pyi">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/pandas/core/util/hashing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/face_recognition_models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/360771202/dlib/face_recognition_model_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/numpy/linalg/linalg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2293" column="4" selection-start-line="2293" selection-start-column="4" selection-end-line="2293" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kMeans.py" />
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/face_recognition/face_recognition_cli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trained_knn_model.clf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video_recorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doorcam_v3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/face_recognition/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/requests/adapters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="497" selection-start-line="497" selection-end-line="497" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runMe.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doorcam_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="130" column="64" selection-start-line="130" selection-start-column="64" selection-end-line="130" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/site-packages/face_recognition/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/json/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doorcam_v4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doorcam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3799">
-          <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="369" column="14" selection-start-line="369" selection-start-column="14" selection-end-line="369" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

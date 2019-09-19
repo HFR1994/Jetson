@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/3rdpartylicenses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/Staticfile" beforeDir="false" afterPath="$PROJECT_DIR$/static/Staticfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/eh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/eh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fondo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fondo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/fondo1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/fondo1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/jo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/jo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/logooxxo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/logooxxo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/assets/logowa.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/logowa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/fon.c449f91b1f68c991463d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/fon.c449f91b1f68c991463d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oxxo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/inline.318b50c57b4eba3d437b.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/inline.318b50c57b4eba3d437b.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/main.eff45961ff30b08fdd9d.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.eff45961ff30b08fdd9d.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/manifest.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/polyfills.16286cde992a53adbc8d.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills.16286cde992a53adbc8d.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dist/styles.cecaf8f00a5fae635a09.bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.cecaf8f00a5fae635a09.bundle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main-es2015.e85febc3c7c48ccdb78f.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-es2015.e85febc3c7c48ccdb78f.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main-es5.e85febc3c7c48ccdb78f.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-es5.e85febc3c7c48ccdb78f.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/polyfills-es2015.fd917e7c3ed57f282ee5.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills-es2015.fd917e7c3ed57f282ee5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/polyfills-es5.f9fad3ad3c84e6dbdd72.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/polyfills-es5.f9fad3ad3c84e6dbdd72.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/runtime-es2015.24b02acc1f369d9b9f37.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/runtime-es2015.24b02acc1f369d9b9f37.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/runtime-es5.24b02acc1f369d9b9f37.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/runtime-es5.24b02acc1f369d9b9f37.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/styles.8848d66e8094fb5e4f4b.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.8848d66e8094fb5e4f4b.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/beep.wav" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/assets/beep.wav" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,18 +86,18 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\OXXO" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\templates" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\static" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
+      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\templates" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\assets" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\OXXO" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\templates" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\static" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson" />
-      <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data\test" />
       <recent name="C:\Users\frhec\PycharmProjects\Jetson\img-data" />
     </key>
   </component>
@@ -315,7 +287,7 @@
       <workItem from="1568391130361" duration="1084000" />
       <workItem from="1568392655908" duration="161000" />
       <workItem from="1568925362393" duration="3208000" />
-      <workItem from="1568929578749" duration="1472000" />
+      <workItem from="1568929578749" duration="3608000" />
     </task>
     <servers />
   </component>

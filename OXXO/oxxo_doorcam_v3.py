@@ -374,7 +374,7 @@ def start():
 
 @app.route("/sound", methods=["post"])
 def sound():
-    playsound(os.getcwd() + '/assets/beep.wav')
+    playsound(os.getcwd() + '/beep.wav')
     return render_template('index.html')
 
 

@@ -13,6 +13,7 @@ import sys
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import jsonify
 import threading
 import time
 from playsound import playsound
@@ -347,17 +348,26 @@ def hello():
         d.setValue(True)
         threading.Timer(3, d.principal, []).start()
         message = "Server Started"
-        return render_template('index.html')
+        return jsonify(
+            status=200,
+            message=message
+        )
     else:
         message = "Server is running"
-        return render_template('index.html')
+        return jsonify(
+            status=201,
+            message=message
+        )
 
 
 @app.route("/stop", methods=["post"])
 def stop():
     d.setValue(False)
     message = "Server Stop"
-    return render_template('index.html')
+    return jsonify(
+        status=200,
+        message=message
+    )
 
 
 @app.route("/restart", methods=["post"])
@@ -375,19 +385,16 @@ def start():
 @app.route("/sound", methods=["post"])
 def sound():
     playsound(os.getcwd() + '/beep.wav')
-    return render_template('index.html')
+    return jsonify(
+        status=200,
+        message=os.getcwd() + '/beep.wav'
+    )
 
 
 @app.route("/accuracy", methods=["post"])
 def accuracy():
     d.setAccuracy(request.form['accuracy'])
     return restart()
-
-
-@app.route("/oxxo")
-def oxxo():
-    return render_template('dist/index.html')
-
 
 if __name__ == "__main__":
     app.run(debug=True)

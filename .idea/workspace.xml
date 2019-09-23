@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OXXO/assets/beep-40.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OXXO/assets/beep.wav" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/assets/beep.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -291,7 +289,7 @@
       <workItem from="1568929578749" duration="4878000" />
       <workItem from="1569258261896" duration="240000" />
       <workItem from="1569266430555" duration="127000" />
-      <workItem from="1569271432261" duration="4921000" />
+      <workItem from="1569271432261" duration="5872000" />
     </task>
     <servers />
   </component>

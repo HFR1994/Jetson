@@ -339,6 +339,7 @@ class Jetson:
 d = Jetson(sys.argv)
 
 app = Flask(__name__, template_folder="../templates")
+CORS(app)
 threader = threading.Event()
 
 

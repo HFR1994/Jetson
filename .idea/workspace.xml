@@ -287,7 +287,7 @@
       <workItem from="1568929578749" duration="4878000" />
       <workItem from="1569258261896" duration="240000" />
       <workItem from="1569266430555" duration="127000" />
-      <workItem from="1569271432261" duration="3447000" />
+      <workItem from="1569271432261" duration="4587000" />
     </task>
     <servers />
   </component>
@@ -323,11 +323,6 @@
           <url>file://$PROJECT_DIR$/Lib/site-packages/face_recognition/face_recognition_cli.py</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py</url>
-          <line>397</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

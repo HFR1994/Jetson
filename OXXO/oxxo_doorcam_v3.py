@@ -398,8 +398,7 @@ def accuracy():
     # return restart()
     return jsonify(
         status=200,
-        total=request.json,
-        message=request.json["accuracy"]
+        total=request.json
     )
 
 

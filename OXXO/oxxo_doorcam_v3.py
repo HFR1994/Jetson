@@ -382,7 +382,7 @@ def start():
     return hello()
 
 
-@app.route("/sound", methods=["post"])
+@app.route("/sound", methods=["get"])
 def sound():
     playsound(os.getcwd() + '/beep.wav')
     return jsonify(

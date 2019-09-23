@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +140,9 @@
       <module name="Jetson" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\Users\frhec\PycharmProjects\Jetson\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OXXO" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -286,7 +290,9 @@
       <workItem from="1568391130361" duration="1084000" />
       <workItem from="1568392655908" duration="161000" />
       <workItem from="1568925362393" duration="3208000" />
-      <workItem from="1568929578749" duration="4404000" />
+      <workItem from="1568929578749" duration="4878000" />
+      <workItem from="1569258261896" duration="240000" />
+      <workItem from="1569266430555" duration="127000" />
     </task>
     <servers />
   </component>

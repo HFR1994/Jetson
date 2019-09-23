@@ -417,7 +417,7 @@ def accuracy():
 def status():
     return jsonify(
         status=200,
-        message=d.getValue()
+        message=d.getAccuracy()
     )
 
 

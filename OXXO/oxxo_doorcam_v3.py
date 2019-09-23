@@ -45,10 +45,10 @@ class Jetson:
         self.loop = condition
 
     def getAccuracy(self):
-        return self.loop
+        return self.accuracy
 
-    def setAccuracy(self, accuracy):
-        self.accuracy = accuracy
+    def setAccuracy(self, accuracy1):
+        self.accuracy = accuracy1
 
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
@@ -393,7 +393,7 @@ def sound():
     )
 
 
-@app.route("/accuracy", methods=["post"])
+@app.route("/accuracy", methods=["post", "options"])
 def accuracy():
     d.setAccuracy(request.json["accuracy"])
     return restart()

@@ -399,7 +399,7 @@ def accuracy():
     return restart()
 
 
-@app.route("/status", methods=["post", "options"])
+@app.route("/status", methods=["get"])
 def accuracy():
     return jsonify(
         status=200,

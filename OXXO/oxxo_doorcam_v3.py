@@ -400,7 +400,7 @@ def accuracy():
 
 
 @app.route("/status", methods=["get"])
-def accuracy():
+def status():
     return jsonify(
         status=200,
         message=d.getValue()

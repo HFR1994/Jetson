@@ -395,8 +395,18 @@ def sound():
 
 @app.route("/accuracy", methods=["post", "options"])
 def accuracy():
-    d.setAccuracy(request.json["accuracy"])
-    return restart()
+    if (request.json["accuracy"]) is None:
+        return jsonify(
+         status=200,
+         message="Recibi None"
+        )
+    else:
+        d.setAccuracy(request.json["accuracy"])
+        return jsonify(
+            status=200,
+            message="Listo"
+        )
+
     # return jsonify(
     #     status=200,
     #     total=request.json

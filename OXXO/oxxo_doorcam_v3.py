@@ -384,8 +384,8 @@ def start():
 
 @app.route("/sound", methods=["get"])
 def sound():
-    print(os.getcwd() + '/beep.wav')
-    # playsound(os.getcwd() + '/beep.wav')
+    # print(os.getcwd() + '/beep.wav')
+    playsound(os.getcwd() + '/OXXO/assets/beep.wav')
     return jsonify(
         status=200,
         message=os.getcwd() + '/beep.wav'

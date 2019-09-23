@@ -11,7 +11,7 @@ import json
 import base64
 import sys
 from flask import Flask
-from flask import render_template
+from flask_cors import CORS
 from flask import request
 from flask import jsonify
 import threading
@@ -339,6 +339,7 @@ class Jetson:
 d = Jetson(sys.argv)
 
 app = Flask(__name__, template_folder="../templates")
+CORS(app)
 threader = threading.Event()
 
 
@@ -392,10 +393,18 @@ def sound():
     )
 
 
-@app.route("/accuracy", methods=["post"])
+@app.route("/accuracy", methods=["post", "options"])
 def accuracy():
     d.setAccuracy(request.form['accuracy'])
     return restart()
+
+
+@app.route("/status", methods=["post", "options"])
+def accuracy():
+    return jsonify(
+        status=200,
+        message=d.getValue()
+    )
 
 
 if __name__ == "__main__":

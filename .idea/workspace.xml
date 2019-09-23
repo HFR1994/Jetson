@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db6373d-5126-4f07-b71e-405de57bcdb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,21 +31,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>compare_</find>
-      <find>-y</find>
-      <find>--yes</find>
-      <find>print</find>
-      <find>i =</find>
-      <find>href</find>
-      <find>src=&quot;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>--yes</replace>
-      <replace>--noinput</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -289,7 +275,8 @@
       <workItem from="1568929578749" duration="4878000" />
       <workItem from="1569258261896" duration="240000" />
       <workItem from="1569266430555" duration="127000" />
-      <workItem from="1569271432261" duration="5872000" />
+      <workItem from="1569271432261" duration="7138000" />
+      <workItem from="1569281054273" duration="418000" />
     </task>
     <servers />
   </component>
@@ -326,11 +313,16 @@
           <line>1</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/OXXO/oxxo_doorcam_v3.py</url>
+          <line>397</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Jetson$Oxxo_Doorcam_V3.coverage" NAME="Oxxo_Doorcam_V3 Coverage Results" MODIFIED="1569275635781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OXXO" />
+    <SUITE FILE_PATH="coverage/Jetson$Oxxo_Doorcam_V3.coverage" NAME="Oxxo_Doorcam_V3 Coverage Results" MODIFIED="1569281416943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OXXO" />
     <SUITE FILE_PATH="coverage/Jetson$doorcam_v4.coverage" NAME="doorcam_v4 Coverage Results" MODIFIED="1564084875186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

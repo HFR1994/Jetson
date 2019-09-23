@@ -393,9 +393,9 @@ def sound():
     )
 
 
-@app.route("/accuracy", methods=["post", "options"])
+@app.route("/accuracy", methods=["post"])
 def accuracy():
-    if (request.json["accuracy"]) is None:
+    if request.json is None:
         return jsonify(
          status=200,
          message="Recibi None"

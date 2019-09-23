@@ -395,7 +395,7 @@ def sound():
 
 @app.route("/accuracy", methods=["post", "options"])
 def accuracy():
-    d.setAccuracy(request.form['accuracy'])
+    d.setAccuracy(request.json["accuracy"])
     return restart()
 
 

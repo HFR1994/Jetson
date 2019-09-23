@@ -393,14 +393,14 @@ def sound():
     )
 
 
-@app.route("/accuracy", methods=["post", "options"])
+@app.route("/accuracy", methods=["post"])
 def accuracy():
-    # d.setAccuracy(request.json["accuracy"])
-    # return restart()
-    return jsonify(
-        status=200,
-        total=request.json
-    )
+    d.setAccuracy(request.json["accuracy"])
+    return restart()
+    # return jsonify(
+    #     status=200,
+    #     total=request.json
+    # )
 
 
 @app.route("/status", methods=["get"])

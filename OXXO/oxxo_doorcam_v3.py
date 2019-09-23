@@ -342,7 +342,7 @@ app = Flask(__name__, template_folder="../templates")
 threader = threading.Event()
 
 
-@app.route("/start")
+@app.route("/start", methods=["post"])
 def hello():
     if not d.getValue():
         d.setValue(True)

@@ -386,11 +386,17 @@ def start():
 @app.route("/sound", methods=["get"])
 def sound():
     # print(os.getcwd() + '/beep.wav')
-    # playsound(os.getcwd() + '/OXXO/assets/beep.wav')
-    return jsonify(
-        status=200,
-        message=os.getcwd() + '/OXXO/assets/beep.wav'
-    )
+    try:
+        playsound(os.getcwd() + '/OXXO/assets/beep.wav')
+        return jsonify(
+            status=200,
+            message=os.getcwd() + '/OXXO/assets/beep.wav'
+        )
+    except:
+        return jsonify(
+            status=200,
+            message=os.getcwd() + '/OXXO/assets/beep.wav'
+        )
 
 
 @app.route("/accuracy", methods=["post"])

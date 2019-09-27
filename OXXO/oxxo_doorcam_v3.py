@@ -394,7 +394,7 @@ def sound():
         )
     except:
         return jsonify(
-            status=200,
+            status=400,
             message=os.getcwd() + '/OXXO/assets/beep.wav'
         )
 

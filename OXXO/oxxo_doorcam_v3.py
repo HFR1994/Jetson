@@ -18,7 +18,7 @@ import threading
 import time
 from playsound import playsound
 import os
-
+import signal
 
 # noinspection SqlResolve
 class Jetson:
@@ -31,6 +31,7 @@ class Jetson:
         self.known_face_metadata = []
         self.cache = []
         self.frame = None
+        self.video_capture = None
         self.best_match = None
         self.loop = False
         if len(argv) == 1:
@@ -141,6 +142,13 @@ class Jetson:
         # On a normal Intel laptop, platform.machine() will be "x86_64" instead of "aarch64"
         return platform.machine() == "aarch64"
 
+    def receiveSignal(self, signalNumber, frame):
+        print('Received:', signalNumber)
+        self.setValue(False)
+        self.video_capture.release()
+        cv2.destroyAllWindows()
+        return
+
     def get_jetson_gstreamer_source(self, capture_width=640, capture_height=480, display_width=640, display_height=480,
                                     framerate=60, flip_method=0):
         """
@@ -157,19 +165,20 @@ class Jetson:
 
     def principal(self):
         print("Start Call")
+        signal.signal(signal.SIGINT, self.receiveSignal)
         # self.load_known_faces()
         # Get access to the webcam. The method is different depending on if this is running on a laptop or a Jetson Nano.
         if self.running_on_jetson_nano():
             # Accessing the camera with OpenCV on a Jetson Nano requires gstreamer with a custom gstreamer source string
-            video_capture = cv2.VideoCapture(self.get_jetson_gstreamer_source(), cv2.CAP_GSTREAMER)
+            self.video_capture = cv2.VideoCapture(self.get_jetson_gstreamer_source(), cv2.CAP_GSTREAMER)
         else:
             # Accessing the camera with OpenCV on a laptop just requires passing in the number of the webcam (usually 0)
             # Note: You can pass in a filename instead if you want to process a video file instead of a live camera stream
-            video_capture = cv2.VideoCapture(0)
+            self.video_capture = cv2.VideoCapture(0)
 
-        while video_capture.isOpened() and self.loop:
+        while self.video_capture.isOpened() and self.loop:
             # Grab a single frame of video
-            ret, self.frame = video_capture.read()
+            ret, self.frame = self.video_capture.read()
 
             # Resize frame of video to 1/4 size for faster face recognition processing
             small_frame = cv2.resize(self.frame, (0, 0), fx=0.25, fy=0.25)
@@ -243,7 +252,7 @@ class Jetson:
                 break
 
         # Release handle to the webcam
-        video_capture.release()
+        self.video_capture.release()
         cv2.destroyAllWindows()
 
     def data_parse(self, datos):
@@ -369,7 +378,6 @@ def hello():
 @app.route("/stop", methods=["post"])
 def stop():
     d.setValue(False)
-
     message = "Server Stop"
     return jsonify(
         status=200,

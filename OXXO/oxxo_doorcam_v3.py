@@ -400,7 +400,7 @@ def restart():
 
 @app.route("/shutdown", methods=["post"])
 def shutdown():
-    os.system("shutdown /s /t 5")
+    os.system("shutdown -h now")
     message = "System will shutdown in 5 sec."
     return jsonify(
         status=200,
@@ -409,7 +409,7 @@ def shutdown():
 
 @app.route("/reboot", methods=["post"])
 def reboot():
-    os.system("shutdown /r /t 5")
+    os.system("reboot")
     message = "System will reboot in 5 sec."
     return jsonify(
         status=200,

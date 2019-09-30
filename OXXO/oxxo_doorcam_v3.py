@@ -139,8 +139,9 @@ class Jetson:
 
     def releaseHandler(self):
         # Release handle to the webcam
-        self.video_capture.release()
-        cv2.destroyAllWindows()
+        if self.video_capture is not None:
+            self.video_capture.release()
+            cv2.destroyAllWindows()
 
     def running_on_jetson_nano(self):
         # To make the same code work on a laptop or on a Jetson Nano, we'll detect when we are running on the Nano

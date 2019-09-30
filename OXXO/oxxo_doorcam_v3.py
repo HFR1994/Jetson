@@ -358,7 +358,7 @@ def receiveSignal(signalNumber, frame):
     print('Received:', signalNumber)
     d.setValue(False)
     d.releaseHandler()
-    return
+    sys.exit()
 
 
 signal.signal(signal.SIGINT, receiveSignal)

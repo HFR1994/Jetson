@@ -20,6 +20,7 @@
         <list>
           <option value="sqlite3.dbapi2.Cursor.commit" />
           <option value="cv2.*" />
+          <option value="OXXO.oxxo_doorcam_v3.*" />
         </list>
       </option>
     </inspection_tool>

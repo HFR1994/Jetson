@@ -20,6 +20,7 @@ from playsound import playsound
 import os
 import signal
 
+
 # noinspection SqlResolve
 class Jetson:
 
@@ -136,18 +137,16 @@ class Jetson:
 
         return self.cursor.fetchall()
 
+    def releaseHandler(self):
+        # Release handle to the webcam
+        self.video_capture.release()
+        cv2.destroyAllWindows()
+
     def running_on_jetson_nano(self):
         # To make the same code work on a laptop or on a Jetson Nano, we'll detect when we are running on the Nano
         # so that we can access the camera correctly in that case.
         # On a normal Intel laptop, platform.machine() will be "x86_64" instead of "aarch64"
         return platform.machine() == "aarch64"
-
-    def receiveSignal(self, signalNumber, frame):
-        print('Received:', signalNumber)
-        self.setValue(False)
-        self.video_capture.release()
-        cv2.destroyAllWindows()
-        return
 
     def get_jetson_gstreamer_source(self, capture_width=640, capture_height=480, display_width=640, display_height=480,
                                     framerate=60, flip_method=0):
@@ -165,7 +164,6 @@ class Jetson:
 
     def principal(self):
         print("Start Call")
-        signal.signal(signal.SIGINT, self.receiveSignal)
         # self.load_known_faces()
         # Get access to the webcam. The method is different depending on if this is running on a laptop or a Jetson Nano.
         if self.running_on_jetson_nano():
@@ -251,9 +249,7 @@ class Jetson:
                 self.save_known_faces()
                 break
 
-        # Release handle to the webcam
-        self.video_capture.release()
-        cv2.destroyAllWindows()
+        self.releaseHandler()
 
     def data_parse(self, datos):
         return datos.get("face_encoding")
@@ -357,6 +353,16 @@ CORS(app)
 threader = threading.Event()
 
 
+def receiveSignal(signalNumber, frame):
+    print('Received:', signalNumber)
+    d.setValue(False)
+    d.releaseHandler()
+    return
+
+
+signal.signal(signal.SIGINT, receiveSignal)
+
+
 @app.route("/start", methods=["post"])
 def hello():
     if not d.getValue():
@@ -406,12 +412,13 @@ def sound():
         message=os.getcwd() + '/OXXO/assets/beep.wav'
     )
 
+
 @app.route("/accuracy", methods=["post"])
 def accuracy():
     if request.json is None:
         return jsonify(
-         status=200,
-         message="Recibi None"
+            status=200,
+            message="Recibi None"
         )
     else:
         d.setAccuracy(request.json["accuracy"])

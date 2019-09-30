@@ -50,6 +50,12 @@ class Jetson:
     def setAccuracy(self, accuracy1):
         self.accuracy = accuracy1
 
+    def resetKnownFaceEncodings(self):
+        self.known_face_encodings = []
+
+    def resetKnownFaceMetadata(self):
+        self.known_face_metadata = []
+
     def save_known_faces(self):
         with open("known_faces.dat", "wb") as face_data_file:
             face_data = [self.known_face_encodings, self.known_face_metadata]
@@ -89,7 +95,6 @@ class Jetson:
         # Here, we are loosening the threshold a little bit to 0.65 because it is unlikely that two very similar
         # people will come up to the door at the same time.
 
-        print(face_distances[best_match_index])
         if face_distances[best_match_index] < self.accuracy:
             return self.known_face_metadata[best_match_index]
 
@@ -364,6 +369,7 @@ def hello():
 @app.route("/stop", methods=["post"])
 def stop():
     d.setValue(False)
+
     message = "Server Stop"
     return jsonify(
         status=200,
@@ -386,7 +392,7 @@ def start():
 @app.route("/sound", methods=["get"])
 def sound():
     # print(os.getcwd() + '/beep.wav')
-    playsound(os.getcwd() + '/OXXO/assets/beep.wav')
+    playsound(os.path.dirname(os.path.realpath(__file__)) + '/assets/beep.wav')
     return jsonify(
         status=200,
         message=os.getcwd() + '/OXXO/assets/beep.wav'
@@ -416,7 +422,8 @@ def accuracy():
 def status():
     return jsonify(
         status=200,
-        message=d.getAccuracy()
+        message=d.getAccuracy(),
+        path=os.path.dirname(os.path.realpath(__file__)) + '/assets/beep.wav'
     )
 
 

@@ -398,6 +398,23 @@ def restart():
     time.sleep(2)
     return hello()
 
+@app.route("/shutdown", methods=["post"])
+def shutdown():
+    os.system("shutdown /s /t 5")
+    message = "System will shutdown in 5 sec."
+    return jsonify(
+        status=200,
+        message=message
+    )
+
+@app.route("/reboot", methods=["post"])
+def reboot():
+    os.system("shutdown /r /t 5")
+    message = "System will reboot in 5 sec."
+    return jsonify(
+        status=200,
+        message=message
+    )
 
 @app.route("/")
 def start():
